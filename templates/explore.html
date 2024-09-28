@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dataset</title>
+</head>
+<body>
+    <h1>Satellite Imagery and Labels</h1>
+
+    <!-- Display the satellite imagery -->
+    <h2>Satellite Imagery</h2>
+    {% for image in images %}
+        <img src="{{ image }}" alt="Satellite Imagery" style="width: 400px;">
+        <br>
+    {% endfor %}
+
+    <!-- Display the corresponding labels -->
+    <h2>Labels</h2>
+    <ul>
+        {% for label in labels %}
+            <li>{{ label }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
